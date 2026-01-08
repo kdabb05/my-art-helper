@@ -4,12 +4,10 @@ A Reflex web application that prompts for an art medium via dropdown and queries
 
 ## Setup
 
-- Create a virtual environment and install dependencies:
+- Install dependencies with uv:
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+uv sync
 ```
 
 - Set your OpenRouter API key in the environment (or copy `.env.example` to `.env` and populate):
@@ -23,15 +21,15 @@ export OPENAI_MODEL="mistralai/mistral-small-creative"
 
 ## Run
 
-### Web App (Recommended)
+### Web App (broken)
 ```bash
-reflex run
+uv run reflex run
 ```
 The web app will be accessible at `http://localhost:3000`. Select a medium from the dropdown and click "Get Suggestions" to receive AI-powered material recommendations.
 
-### Legacy CLI
+### Legacy CLI (recomended)
 ```bash
-python main.py
+uv run main.py
 ```
 Choose a medium and the app will print the LLM's response.
 
@@ -41,7 +39,7 @@ Choose a medium and the app will print the LLM's response.
 
 ```bash
 export DEBUG_OPENAI=true
-reflex run
+uv run reflex run
 ```
 
 - If you get a DNS or network error (failed to resolve `api.openrouter.ai`), possible fixes:

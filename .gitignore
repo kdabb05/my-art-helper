@@ -5,3 +5,5 @@ __pycache__/
 assets/external/
 *.py[cod]
 .env
+.venv
+.pytest_cache/
